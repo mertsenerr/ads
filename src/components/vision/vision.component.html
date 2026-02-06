@@ -1,0 +1,72 @@
+
+<section class="py-40 relative overflow-hidden bg-background-dark" id="vision">
+     <!-- Ambient Lighting -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(212,197,176,0.08),transparent_50%)] pointer-events-none"></div>
+
+    <div class="watermark-text bottom-0 right-0 translate-x-1/4 select-none">Innovation</div>
+    
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+        
+        <!-- Part 1: Architecture -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center mb-48">
+            <div class="order-2 lg:order-1 relative group">
+                <div class="absolute -inset-6 border border-champagne/10 -z-10 transition-all duration-700 group-hover:inset-0 group-hover:border-champagne/30"></div>
+                <div class="relative overflow-hidden bg-background-dark aspect-[4/3] shadow-2xl">
+                     <!-- Image: Futuristic Curvy Architecture -->
+                     <img 
+                        src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2068&auto=format&fit=crop" 
+                        alt="Modern glass building architecture" 
+                        class="w-full h-full object-cover grayscale brightness-[0.6] warm-studio-filter group-hover:brightness-90 group-hover:grayscale-0 transition-all duration-[1.5s] scale-100 group-hover:scale-105"
+                    />
+                    <div class="absolute inset-0 bg-radial-gradient from-champagne/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+                </div>
+            </div>
+            
+            <div class="order-1 lg:order-2">
+                <span class="text-[10px] uppercase tracking-[0.5em] text-champagne font-bold mb-10 block">{{ langService.t().vision.label1 }}</span>
+                <h2 class="text-4xl md:text-6xl font-bold tracking-tighter leading-tight mb-10 text-platinum">
+                    {{ langService.t().vision.title1Part1 }} <span class="text-champagne">{{ langService.t().vision.title1Part2 }}</span> {{ langService.t().vision.title1Part3 }}
+                </h2>
+                <!-- Removed hard line here -->
+                <p class="text-gold-muted text-lg font-light leading-relaxed italic pl-0">
+                    {{ langService.t().vision.quote }}
+                </p>
+            </div>
+        </div>
+
+        <!-- Part 2: Data -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
+            <div>
+                <span class="text-[10px] uppercase tracking-[0.5em] text-champagne font-bold mb-10 block">{{ langService.t().vision.label2 }}</span>
+                <h2 class="text-4xl md:text-6xl font-bold tracking-tighter leading-tight mb-14 text-platinum">
+                    {{ langService.t().vision.title2Part1 }} <span class="text-champagne outline-text">{{ langService.t().vision.title2Part2 }}</span> {{ langService.t().vision.title2Part3 }}
+                </h2>
+                
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="glass-card p-10 hover:bg-white/[0.03] transition-colors duration-500 hover:border-champagne/30">
+                        <span class="material-symbols-outlined text-champagne mb-6 text-3xl">verified</span>
+                        <h4 class="font-bold text-[10px] tracking-[0.2em] uppercase mb-3 text-platinum">{{ langService.t().vision.card1.title }}</h4>
+                        <p class="text-[11px] text-gold-muted/70 leading-relaxed font-light">{{ langService.t().vision.card1.text }}</p>
+                    </div>
+                    <div class="glass-card p-10 hover:bg-white/[0.03] transition-colors duration-500 hover:border-champagne/30">
+                        <span class="material-symbols-outlined text-champagne mb-6 text-3xl">memory</span>
+                        <h4 class="font-bold text-[10px] tracking-[0.2em] uppercase mb-3 text-platinum">{{ langService.t().vision.card2.title }}</h4>
+                        <p class="text-[11px] text-gold-muted/70 leading-relaxed font-light">{{ langService.t().vision.card2.text }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <div class="absolute -inset-6 border border-champagne/10 -z-10 translate-x-10 -translate-y-10 transition-all duration-700 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:border-champagne/30"></div>
+                <div class="relative overflow-hidden bg-background-dark aspect-square shadow-2xl">
+                     <!-- Image: Microchip / Data / Circuit -->
+                     <img 
+                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop" 
+                        alt="High tech data visualization" 
+                        class="w-full h-full object-cover grayscale brightness-[0.5] warm-studio-filter group-hover:brightness-90 group-hover:grayscale-0 transition-all duration-[1.5s] scale-100 group-hover:scale-110"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

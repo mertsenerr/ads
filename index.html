@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-24">
+<head>
+    <meta charset="utf-8">
+    <title>ADS | Audit Data Stocktake</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;900&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // PALETTE UPDATE: Dark Blue / Night Blue / Black Theme
+              "background-dark": "#020617", /* Slate 950 - Deep Night Blue */
+              "obsidian-deep": "#000000",   /* Pure Black */
+              "obsidian-matte": "#0f172a",  /* Slate 900 - Dark Blue Panel */
+              "champagne": "#3b82f6",       /* Blue 500 - Electric Blue Accent (Replaces Gold) */
+              "platinum": "#f1f5f9",        /* Slate 100 - Whiteish */
+              "gold-muted": "#64748b",      /* Slate 500 - Muted Blue Grey (Replaces Brownish Gold) */
+              "charcoal-faded": "#1e293b",  /* Slate 800 */
+              "titanium": "#94a3b8",        /* Slate 400 */
+              "terminal-green": "#10b981",  /* Emerald 500 */
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Syncopate", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              'md': '4px', /* Slightly softer for modern blue theme */
+            },
+            letterSpacing: {
+              'widest-xl': '0.3em',
+            },
+            animation: {
+                'marquee': 'marquee 25s linear infinite', 
+                'spin-slow': 'spin 10s linear infinite',
+                'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+            },
+            keyframes: {
+                fadeIn: {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
+                },
+                slideUp: {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+                marquee: {
+                    '0%': { transform: 'translateX(0%)' },
+                    '100%': { transform: 'translateX(-100%)' }, 
+                }
+            }
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .outline-text {
+                -webkit-text-stroke: 1px rgba(59, 130, 246, 0.5); /* Blue Stroke */
+                color: transparent;
+            }
+            .glass-card {
+                background: rgba(15, 23, 42, 0.6);
+                backdrop-filter: blur(20px);
+                border: 1px solid rgba(59, 130, 246, 0.15);
+            }
+            .watermark-text {
+                position: absolute;
+                font-size: 12rem;
+                font-weight: 900;
+                color: #1e293b; /* Slate 800 */
+                opacity: 0.15;
+                pointer-events: none;
+                z-index: 0;
+                white-space: nowrap;
+                text-transform: uppercase;
+            }
+            .razor-thin {
+                height: 1px;
+                background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+            }
+            .warm-studio-filter {
+                /* Updated filter for Blue Theme: Cooler tones */
+                filter: contrast(1.1) brightness(0.9) saturate(1.1) hue-rotate(180deg) sepia(0.2) hue-rotate(180deg); 
+                mix-blend-mode: normal;
+            }
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 48;
+            }
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020617;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border: 1px solid #0f172a;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3b82f6;
+        }
+
+        /* Mobile adjustments for watermark */
+        @media (max-width: 768px) {
+            .watermark-text {
+                font-size: 4rem;
+            }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "rxjs": "https://esm.sh/rxjs@^7.8.2?conditions=es2015",
+    "rxjs/operators": "https://esm.sh/rxjs@^7.8.2/operators?conditions=es2015",
+    "rxjs/ajax": "https://esm.sh/rxjs@^7.8.2/ajax?conditions=es2015",
+    "rxjs/webSocket": "https://esm.sh/rxjs@^7.8.2/webSocket?conditions=es2015",
+    "rxjs/testing": "https://esm.sh/rxjs@^7.8.2/testing?conditions=es2015",
+    "rxjs/fetch": "https://esm.sh/rxjs@^7.8.2/fetch?conditions=es2015",
+    "@angular/compiler": "https://esm.sh/@angular/compiler@^21.1.2?external=rxjs",
+    "@angular/platform-browser": "https://esm.sh/@angular/platform-browser@^21.1.2?external=rxjs",
+    "@angular/core": "https://esm.sh/@angular/core@^21.1.2?external=rxjs",
+    "@angular/common": "https://esm.sh/@angular/common@^21.1.2?external=rxjs",
+    "@angular/router": "https://esm.sh/@angular/router@^21.1.2?external=rxjs"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background-dark text-platinum selection:bg-champagne selection:text-white font-sans overflow-x-hidden antialiased">
+    <app-root></app-root>
+</body>
+</html>

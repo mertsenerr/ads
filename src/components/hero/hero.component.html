@@ -1,0 +1,71 @@
+<section class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-20" id="hero">
+    <!-- Background -->
+    <div class="absolute inset-0 z-0">
+        <img 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb2gz1-UX5sJ9sC5vanM1JItqr1GedligXEcSOU-MmUkAHP-TQGLIaZ1i9sXA5W0qJJcdRV4f9mnRnv4a6K1YqQ3Cl_oYn8_g_jHbnA7FPSlocLIdgcd_JWVJsMTb5n1Ibs10-FvN4GpOOkyj2ebCYgFyai0xITDzoFb_WIOxp3j_qWHxYnGy6b5tV0F4KXefwdf05CKibipXX1V3RxOogzaSFVxjUmZkMs2-z8fEp9d27ZTPiCn1JRgJ5ReX1azZ5EdxcseBW8RI" 
+            alt="Industrial warehouse perspective" 
+            class="w-full h-full object-cover scale-105 warm-studio-filter animate-[pulse_10s_ease-in-out_infinite] transition-opacity duration-[2000ms] ease-in-out"
+            [style.opacity]="isTitleHovered() ? '0.08' : '0.18'"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-background-dark via-transparent to-background-dark"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#020617_90%)]"></div>
+        
+        <!-- Extra dark overlay that appears on hover -->
+        <div 
+            class="absolute inset-0 bg-black transition-opacity duration-[2000ms] ease-in-out pointer-events-none"
+            [style.opacity]="isTitleHovered() ? '0.4' : '0'"
+        ></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 text-center px-4 max-w-7xl mx-auto">
+        
+        <!-- Top Label -->
+        <div class="flex items-center justify-center gap-4 mb-8 md:mb-12 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
+            <span class="w-8 md:w-12 h-[1px] bg-champagne/30"></span>
+            <span class="text-[9px] md:text-[10px] uppercase tracking-[0.4em] text-champagne font-medium whitespace-nowrap">{{ langService.t().hero.label }}</span>
+            <span class="w-8 md:w-12 h-[1px] bg-champagne/30"></span>
+        </div>
+
+        <!-- Main Title -->
+        <h1 class="font-display leading-none mb-10 opacity-0 animate-[slideUp_1s_ease-out_0.3s_forwards]">
+            <!-- Responsive Font Sizes -->
+            <span class="block text-6xl md:text-[150px] font-black tracking-tighter mb-2 text-platinum drop-shadow-2xl">ADS</span>
+            <span 
+                class="block text-3xl md:text-[90px] font-bold outline-text tracking-tight uppercase leading-[1.1] md:leading-[0.85] transition-colors duration-700 cursor-default hover:text-champagne/10"
+                (mouseenter)="isTitleHovered.set(true)"
+                (mouseleave)="isTitleHovered.set(false)"
+            >{{ langService.t().hero.titleLine2 }}</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="max-w-xl mx-auto text-sm md:text-base text-gold-muted/80 mt-8 md:mt-12 mb-12 md:mb-16 font-light leading-relaxed tracking-wide opacity-0 animate-[fadeIn_1s_ease-out_0.6s_forwards]">
+            {{ langService.t().hero.subtitle }}
+        </p>
+
+        <!-- CTA Area -->
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 opacity-0 animate-[fadeIn_1s_ease-out_0.9s_forwards]">
+            <button class="w-full md:w-auto px-14 py-5 bg-champagne text-white font-bold text-[10px] uppercase tracking-[0.3em] hover:bg-white hover:text-background-dark transition-all duration-700 shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_40px_rgba(59,130,246,0.4)] hover:scale-105 rounded-sm">
+                {{ langService.t().hero.cta }}
+            </button>
+
+            <!-- Stats -->
+            <div class="flex items-center gap-6 md:gap-12 mt-4 md:mt-0 px-8 border-l border-champagne/10 border-r md:border-r-0 md:border-l">
+                <div class="text-center group cursor-default">
+                    <div class="text-xl md:text-2xl font-light tracking-tighter text-champagne group-hover:text-white transition-colors duration-500">99.9%</div>
+                    <div class="text-[8px] uppercase tracking-[0.3em] text-gold-muted mt-2">{{ langService.t().hero.stats.accuracy }}</div>
+                </div>
+                <div class="w-[1px] h-10 bg-champagne/10"></div>
+                <div class="text-center group cursor-default">
+                    <div class="text-xl md:text-2xl font-light tracking-tighter text-champagne group-hover:text-white transition-colors duration-500">24/7</div>
+                    <div class="text-[8px] uppercase tracking-[0.3em] text-gold-muted mt-2">{{ langService.t().hero.stats.uptime }}</div>
+                </div>
+                <div class="w-[1px] h-10 bg-champagne/10"></div>
+                <div class="text-center group cursor-default">
+                    <div class="text-xl md:text-2xl font-light tracking-tighter text-champagne group-hover:text-white transition-colors duration-500">Global</div>
+                    <div class="text-[8px] uppercase tracking-[0.3em] text-gold-muted mt-2">{{ langService.t().hero.stats.scale }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
