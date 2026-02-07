@@ -364,11 +364,11 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   ];
 
   galleryItems = [
-      { img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop', title: 'Warehouse Logistics', location: 'Gebze, TR' },
-      { img: 'https://images.unsplash.com/photo-1590247813693-5541d1c609fd?q=80&w=800&auto=format&fit=crop', title: 'Port Operations', location: 'Izmir, TR' },
-      { img: 'https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=800&auto=format&fit=crop', title: 'Fashion Retail', location: 'Istanbul, TR' },
-      { img: 'https://images.unsplash.com/photo-1580674285054-bed31e145f59?q=80&w=800&auto=format&fit=crop', title: 'Automated Sortation', location: 'Ankara, TR' },
-      { img: 'https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=800&auto=format&fit=crop', title: 'Supermarket Chain', location: 'Bursa, TR' },
-      { img: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800&auto=format&fit=crop', title: 'Pharma Storage', location: 'Istanbul, TR' },
+    { img: 'assets/images/shell.jpg', title: 'Shell İstasyonu', location: 'Istanbul, TR' },
+    { img: 'assets/images/bp.jpeg', title: 'BP İstasyonu', location: 'Ankara, TR' },
+    { img: 'assets/images/opet.jpg', title: 'OPET İstasyonu', location: 'Izmir, TR' },
+    { img: 'assets/images/aytemiz.jpg', title: 'Aytemiz İstasyonu', location: 'Bursa, TR' },
+    { img: 'assets/images/eczane.webp', title: 'Eczane Sayımı', location: 'Antalya, TR' },
+    { img: 'assets/images/levis.webp', title: 'Levi\'s Mağaza', location: 'Istanbul, TR' },
   ];
 }

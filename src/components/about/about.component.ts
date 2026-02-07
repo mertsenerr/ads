@@ -128,45 +128,6 @@ import { LanguageService } from '../../services/language.service';
                     <span class="material-symbols-outlined text-9xl text-champagne/10 group-hover:text-champagne/20 transition-colors duration-700">qr_code_scanner</span>
                 </div>
             </div>
-
-            <!-- Team Section -->
-            <div class="opacity-0 animate-[fadeIn_1s_ease-out_1.2s_forwards]">
-                 <h3 class="text-[10px] uppercase tracking-[0.4em] font-bold text-champagne mb-12 text-center">{{ langService.t().aboutPage.teamTitle }}</h3>
-                 <!-- UPDATED: Grid cols changed to support 5 members: lg(3 cols), xl(5 cols) for better fit -->
-                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
-                    <!-- Member 1 -->
-                    <div class="group relative overflow-hidden bg-obsidian-matte border border-white/5 p-8 hover:border-champagne/30 transition-all duration-500">
-                        <div class="mb-6 h-1 w-12 bg-champagne/50 group-hover:w-full transition-all duration-500"></div>
-                        <h4 class="text-xl font-bold text-white mb-2 uppercase">{{ langService.t().aboutPage.member1.name }}</h4>
-                        <p class="text-[10px] uppercase tracking-widest text-gold-muted">{{ langService.t().aboutPage.member1.role }}</p>
-                    </div>
-                    <!-- Member 2 -->
-                    <div class="group relative overflow-hidden bg-obsidian-matte border border-white/5 p-8 hover:border-champagne/30 transition-all duration-500">
-                        <div class="mb-6 h-1 w-12 bg-champagne/50 group-hover:w-full transition-all duration-500"></div>
-                        <h4 class="text-xl font-bold text-white mb-2 uppercase">{{ langService.t().aboutPage.member2.name }}</h4>
-                        <p class="text-[10px] uppercase tracking-widest text-gold-muted">{{ langService.t().aboutPage.member2.role }}</p>
-                    </div>
-                    <!-- Member 3 -->
-                    <div class="group relative overflow-hidden bg-obsidian-matte border border-white/5 p-8 hover:border-champagne/30 transition-all duration-500">
-                        <div class="mb-6 h-1 w-12 bg-champagne/50 group-hover:w-full transition-all duration-500"></div>
-                        <h4 class="text-xl font-bold text-white mb-2 uppercase">{{ langService.t().aboutPage.member3.name }}</h4>
-                        <p class="text-[10px] uppercase tracking-widest text-gold-muted">{{ langService.t().aboutPage.member3.role }}</p>
-                    </div>
-                    <!-- Member 4 -->
-                    <div class="group relative overflow-hidden bg-obsidian-matte border border-white/5 p-8 hover:border-champagne/30 transition-all duration-500">
-                        <div class="mb-6 h-1 w-12 bg-champagne/50 group-hover:w-full transition-all duration-500"></div>
-                        <h4 class="text-xl font-bold text-white mb-2 uppercase">{{ langService.t().aboutPage.member4.name }}</h4>
-                        <p class="text-[10px] uppercase tracking-widest text-gold-muted">{{ langService.t().aboutPage.member4.role }}</p>
-                    </div>
-                    <!-- Member 5 (NEW) -->
-                    <div class="group relative overflow-hidden bg-obsidian-matte border border-white/5 p-8 hover:border-champagne/30 transition-all duration-500">
-                        <div class="mb-6 h-1 w-12 bg-champagne/50 group-hover:w-full transition-all duration-500"></div>
-                        <h4 class="text-xl font-bold text-white mb-2 uppercase">{{ langService.t().aboutPage.member5.name }}</h4>
-                        <p class="text-[10px] uppercase tracking-widest text-gold-muted">{{ langService.t().aboutPage.member5.role }}</p>
-                    </div>
-                 </div>
-            </div>
-
         </div>
     </section>
   `,
